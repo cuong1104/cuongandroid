@@ -58,7 +58,12 @@ XmlUtils.pathSave = Environment.getExternalStorageDirectory()+ File.separator + 
 
 3, Set On Backup Finish
 
-XmlUtils.OnFinishBackup finish = new XmlUtils.OnFinishBackup() { @Override public void onFinish() { DeviceUtils.showMessage(context, "Backup completed!"); } }; XmlUtils.BackupSMS(fileName, listSms, listMms, finish);
+XmlUtils.OnFinishBackup finish = new XmlUtils.OnFinishBackup() { 
+	@Override public void onFinish() { 
+		DeviceUtils.showMessage(context, "Backup completed!"); 
+		} 
+	}; 
+XmlUtils.BackupSMS(fileName, listSms, listMms, finish);
 
 4, Restore
 

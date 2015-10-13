@@ -94,9 +94,18 @@
                     <code>@Override</code>
                     <code>public void onFinish() {</code>
                         <code>DeviceUtils.showMessage(context, "Backup completed!");</code>
-                        <code>updateName();</code>
                     <code>}</code>
-                <code>};</code></p>
+                <code>};</code>
+<code>XmlUtils.BackupSMS(fileName, listSms, listMms, finish);</code></p>
+
+<p>4, Restore</p>
+
+<ul>
+<li><p>Set ProgressBar: <code>XmlUtils.pbRestore = pbRestore;</code></p></li>
+<li><p>Set Button Restore: <code>XmlUtils.btnRestore = btnRestore;</code> need to lock it while restoring</p></li>
+<li><p>Set TextView: <code>XmlUtils.tvProgressRestore = tvProgressRestore;</code> to show progress ex: 12/222</p></li>
+<li><p>Restore: <code>XmlUtils.RestoreSMS(context, pathBackup, merger);</code></p></li>
+</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/cuong1104/cuongandroid">CuongAndroid</a> is maintained by <a href="https://github.com/cuong1104">cuong1104</a>.</span>

@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         ToastUtils.show(this, "Good");
         ToastUtils.show(this, "Good");
         ToastUtils.show(this, "Very Good");
+        ToastUtils.show(this, "Very Good");
         PermissionUtils.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.READ_CONTACTS,

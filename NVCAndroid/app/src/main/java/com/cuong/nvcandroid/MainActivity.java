@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ToastUtils.show(this, "Good");
+        ToastUtils.show(this, "Good");
+        ToastUtils.show(this, "Good");
+        ToastUtils.show(this, "Very Good");
+        ToastUtils.show(this, "Very Good");
         PermissionUtils.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.ACCESS_COARSE_LOCATION,
                 Manifest.permission.READ_CONTACTS,

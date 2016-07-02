@@ -11,6 +11,7 @@ import android.widget.ListView;
  * Contact: vcuong11s@gmail.com or unme.rf@gmail.com
  */
 public class ViewUtils {
+
     /**** Method for Setting the Height of the ListView dynamically.
      **** Hack to fix the issue of not showing all the items of the ListView
      **** when placed inside a ScrollView  ****/

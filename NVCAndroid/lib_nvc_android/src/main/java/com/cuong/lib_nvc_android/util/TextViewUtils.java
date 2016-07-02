@@ -9,8 +9,15 @@ import android.widget.TextView;
  * Open Source: This source has been wrote by CuongNguyen
  * Contact: vcuong11s@gmail.com or unme.rf@gmail.com
  */
-public class TextViewUtils {
-    public static TextWatcher AddTextChange(TextView textView, final Runnable runnable){
+public final class TextViewUtils {
+
+    /**
+     * Execute method when onTextChanged
+     * @param textView TextView
+     * @param afterTextChange Method
+     * @return TextWatcher
+     */
+    public static TextWatcher AddTextChange(TextView textView, final AfterTextChange afterTextChange){
         TextWatcher tw = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -24,9 +31,7 @@ public class TextViewUtils {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (runnable != null){
-                    runnable.run();
-                }
+                afterTextChange.afterTextChange(s.toString());
             }
         };
 
@@ -34,5 +39,9 @@ public class TextViewUtils {
             textView.addTextChangedListener(tw);
         }
         return tw;
+    }
+
+    public interface AfterTextChange{
+        void afterTextChange(String text);
     }
 }

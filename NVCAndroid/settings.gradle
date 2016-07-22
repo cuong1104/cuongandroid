@@ -1,1 +1,1 @@
-include ':app', ':lib_nvc_android'
+include ':app', ':cdroid'
